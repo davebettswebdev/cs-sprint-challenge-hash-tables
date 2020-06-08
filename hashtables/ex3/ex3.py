@@ -2,7 +2,15 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    integers = {}
+    result = []
+    for x in arrays:
+        for y in x:
+            if y not in integers:
+                integers[y] = 0
+            else:
+                result.append(y) 
+    result= list(dict.fromkeys(result))
 
     return result
 

@@ -2,7 +2,13 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+    dict = {}
+    for num in a:
+        if dict.get(abs(num)):
+            result.append(abs(num))
+        else:
+            dict[abs(num)] = num
 
     return result
 
