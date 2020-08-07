@@ -4,6 +4,16 @@ def has_negatives(a):
     """
     # Your code here
 
+    result = []
+    
+    z = {}
+    
+    for num in a:
+        if z.get(abs(num)):
+            result.append(abs(num))
+        else:
+            z[abs(num)] = num
+
     return result
 
 
