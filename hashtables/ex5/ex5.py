@@ -6,7 +6,22 @@ def finder(files, queries):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+    
+    z = {}
+
+    for f in files:
+        x = f.split("/")
+        y = x[-1]
+
+        if y not in z:
+            z[y] = []
+
+        z[y].append(f)
+
+    for query in queries:
+        if query in z:
+            result.extend(z[query])
 
     return result
 
